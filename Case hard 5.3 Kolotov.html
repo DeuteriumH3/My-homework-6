@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Case hard 5.3
+  </title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+    /*3. Напишите программу, которая запрашивает у пользователя координаты точек A(x1,y1) B(x2,y2) и определяет,
+	в какой квадрант (четверть) попадает каждая из точек, и какая из них дальше отстоит от начала координат.*/
+    
+    let x1;
+    let x2;
+    let y1;
+    let y2;
+    let distanceСoordinateA;
+    let distanceСoordinateB;
+
+    x1 = +prompt('Введите координату x1 точки А:', '1');
+    y1 = +prompt('Введите координату y1 точки А:', '2');
+    x2 = +prompt('Введите координату x2 точки B:', '1');
+    y2 = +prompt('Введите координату y2 точки B:', '3');
+
+    if (x1 > 0 && y1 > 0) {
+      console.log('Точка А находится в Первой четверти.');
+    }
+    else if (x1 < 0 && y1 > 0) {
+      console.log('Точка А находится во Второй четверти.');
+    }
+    else if (x1 < 0 && y1 < 0) {
+      console.log('Точка А находится в Третьей четверти.');
+    }
+    else if (x1 > 0 && y1 < 0) {
+      console.log('Точка А находится в Четвертой четверти.');
+    }
+    else if (x1 == 0 && y1 > 0 || y1 < 0) {
+      console.log('Точка А лежит на оси координат Y.');
+    }
+    else if (y1 == 0 && x1 > 0 || x1 < 0) {
+      console.log('Точка А лежит на оси координат X.');
+    }
+    else if (y1 == 0 && x1 == 0) {
+      console.log('Точка А лежит в нулевой точке осей координат X и Y.');
+    };
+
+    if (x2 > 0 && y2 > 0) {
+      console.log('Точка В находится в Первой четверти.');
+    }
+    else if (x2 < 0 && y2 > 0) {
+      console.log('Точка В находится во Второй четверти.');
+    }
+    else if (x2 < 0 && y2 < 0) {
+      console.log('Точка В находится в Третьей четверти.');
+    }
+    else if (x2 > 0 && y2 < 0) {
+      console.log('Точка В находится в Четвертой четверти.');
+    }
+    else if (x2 == 0 && y2 > 0 || y2 < 0) {
+      console.log('Точка В лежит на оси координат Y.');
+    }
+    else if (y2 == 0 && x2 > 0 || x2 < 0) {
+      console.log('Точка В лежит на оси координат X.');
+    }
+    else if (y2 == 0 && x2 == 0) {
+      console.log('Точка B лежит в нулевой точке осей координат X и Y.');
+    };
+ 
+    distanceСoordinateA = Math.sqrt(x1**2 + y1**2);
+    distanceСoordinateB = Math.sqrt(x2**2 + y2**2);
+
+    if (distanceСoordinateA > distanceСoordinateB) {
+	  console.log('Точка A находится дальше от начала координат.');
+	} 
+    else if (distanceСoordinateA < distanceСoordinateB) {
+	  console.log('Точка B находится дальше от начала координат.');
+	} 
+    else {
+	  console.log('Точки A и B находятся на одинаковом расстоянии от начала координат.');
+	};
+  </script>
+</body>
+
+</html>

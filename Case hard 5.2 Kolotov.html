@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Case hard 5.2
+  </title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+    /*2.Написать программу, которая определяет, является ли введённый пользователем год високосным.
+    Осуществить проверку корректности ввода пользователем исходных данных.*/
+    
+    let year;
+    
+    year = +prompt('Введите год:', '2024');
+
+    if (Number(year) == year) {
+    }
+    else {
+      console.log('Ошибка! Вы ввели не число.');
+    };
+    if (year < 0) {
+      console.log('Ошибка! Вы ввели отрицательное значение.');
+    };
+    
+    if (year % 400 == 0) {
+      console.log('Год високосный.');
+    }
+    else if (year % 4 == 0) {
+		  console.log('Год високосный.');
+	  }
+    else if (year % 100 == 0) {
+      console.log('Год не високосный.');
+    }
+    else if (year % 1 == 0) {
+      console.log('Год не високосный.');
+	  }; 
+  </script>
+</body>
+
+</html>

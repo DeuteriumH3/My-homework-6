@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Case normal 5.2
+  </title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+    /*2. Пользователь вводит число, операцию (сложение (+), вычитание (-), умножение (*) 
+    или деление (/)) и второе число. Вывести результат введенного действия над числами в 
+    консоль. Осуществить проверку корректности ввода данных.*/
+    let numberOne;
+    let numberTwo;
+    let operation;
+    let result;
+
+    numberOne = +prompt('Введите первое число:', '2');
+    operation = prompt('Введите операцию +, -, *, /:', '+');
+    numberTwo = +prompt('Введите второе число:', '3');
+
+    if (Number(numberOne) == (numberOne) && Number(numberTwo) == (numberTwo)) {
+    }
+    else {
+      console.log('Ошибка! Вы ввели не число.');
+    }
+
+    if (operation == '+') {
+        result = (numberOne + numberTwo);
+    } 
+    if (operation == '-') {
+        result = (numberOne - numberTwo);
+    }
+    if (operation == '*') {
+        result = (numberOne * numberTwo);
+    }
+    if (operation == '/') {
+        result = (numberOne / numberTwo);
+    }
+    
+    if (result == Infinity) {
+        console.log('Ошибка! Нельзя делить на ноль.');
+    }
+    
+    console.log(result);
+  </script>
+</body>
+
+</html>

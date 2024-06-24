@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Case normal 5.4
+  </title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+    /*4. Написать программу, которая запрашивает у пользователя значение переменной х и выводит
+    соответствующее значение функции у, заданной кусочной формулой:
+    y(x) = -x**2 - 4x - 3, если x <= -1;
+    y(x) = x + 1, если -1 < x <= 1;
+    y(x) = 2 / x, если x > 1
+    */
+    let x;
+    let y;
+
+    x = +prompt('Введите значение х:');
+    
+    if (Number(x) == x) {
+    }
+    else {
+      console.log('Ошибка! Вы ввели не число.');
+    }
+    if ((year == null) || isNaN(year)) {
+        console.log("Ошибка! Введены некорректные данные.");
+        }
+    
+    if (x <= -1) {
+        y = (-x)**2 - 4*x - 3;
+    }
+    if (x > -1 && x <= 1) {
+        y = x + 1;
+    }
+    if (x > 1) {
+        y = 2 / x;
+    }
+
+    console.log(y);
+  </script>
+</body>
+
+</html>

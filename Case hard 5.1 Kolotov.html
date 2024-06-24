@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Case hard 5.1
+  </title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+    /*1.Написать программу, которая определяет текущее время (ночь, утро, день, вечер) и день недели. Ночью будем считать время,
+    попадающее в интервал [0:00; 6:00] часов, утром [6:00; 12:00], днём - [12:00; 18:00] и вечером - [18:00; 0:00].
+    Вывести в консоль время суток и день недели в следующем виде: "Сейчас утро понедельника" и т.п.*/
+
+    let timeDay;
+    let hours;
+    let date;
+    let dayWeek;
+    let dayWeekName;
+
+    date = new Date();
+    dayWeek = date.getDay();
+    hours = date.getHours();
+
+    if (hours >= 0 && hours < 6) {
+      timeDay = 'ночь';
+    }
+    if (hours >= 6 && hours < 12) {
+      timeDay = 'утро';
+    }
+    if (hours >= 12 && hours < 18) {
+      timeDay = 'день';
+    }
+    if (hours >= 18 && hours < 24) {
+      timeDay = 'вечер';
+    };
+
+    switch (dayWeek) {
+      case 0:
+      dayWeekName = 'воскресенья';
+      break;
+      case 1:
+      dayWeekName = 'понедельника';
+      break;
+      case 2:
+      dayWeekName = 'вторника';
+      break;
+      case 3:
+      dayWeekName = 'среды';
+      break;
+      case 4:
+      dayWeekName = 'четверга';
+      break;
+      case 5:
+      dayWeekName = 'пятницы';
+      break;
+      case 6:
+      dayWeekName = 'субботы';
+      break;
+    };
+
+    console.log('Сейчас', timeDay, dayWeekName);
+  </script>
+</body>
+
+</html>

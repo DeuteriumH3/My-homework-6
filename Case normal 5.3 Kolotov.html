@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Case normal 5.3
+  </title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+    /*3.Написать программу, которая запрашивает у пользователя базовую стоимость
+    полиса ОСАГО, а также мощность двигателя автомобиля, и выводит стоимость полиса
+    с учетом мощности двигателя (Полная_стоимость_полиса = Базовая_стоимость_полиса
+    × Коэффициент_мощности_двигателя). Осуществить проверку корректности введенных
+    исходных данных. Для расчета стоимости полиса используйте таблицу коэффициентов
+    страховых тарифов:
+    до 50 включительно - 0,6
+    свыше 50 до 70 включительно - 1
+    свыше 70 до 100 включительно - 1,1
+    свыше 100 до 120 включительно - 1,2
+    свыше 120 до 150 включительно - 1,4
+    свыше 150 - 1,6*/
+    let basicCost;
+    let powerEngine;
+    let coefficientPowerEngine;
+    let fullCost;
+
+    basicCost = +prompt('Введите базовую стоимость полиса ОСАГО:', '5000');
+    powerEngine = +prompt('Введите мощность двигателя автомобиля', '100');
+
+    if (Number(basicCost) == (basicCost) && Number(powerEngine) == (powerEngine)) {
+    }
+    else {
+      console.log('Ошибка! Вы ввели не число.');
+    }
+    if (basicCost == null || powerEngine == null || basicCost <= 0 || powerEngine <= 0){
+      console.log('Ошибка! Вы ввели не корректные значения.');
+    }
+
+    if (powerEngine <= 50) {
+       coefficientPowerEngine = 0.6;
+    }
+    if (powerEngine > 50 && powerEngine <=70) {
+       coefficientPowerEngine = 1;
+    }
+    if (powerEngine > 70 && powerEngine <=100) {
+       coefficientPowerEngine = 1.1;
+    }
+    if (powerEngine > 100 && powerEngine <=120) {
+       coefficientPowerEngine = 1.2;
+    }
+    if (powerEngine > 120 && powerEngine <=150) {
+       coefficientPowerEngine = 1.4;
+    }
+    if (powerEngine > 150) {
+       coefficientPowerEngine = 1.6;
+    }
+
+    fullCost = basicCost * coefficientPowerEngine;
+
+    console.log(fullCost);
+  </script>
+</body>
+
+</html>

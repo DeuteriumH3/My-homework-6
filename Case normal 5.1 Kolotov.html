@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Case normal 5.1
+  </title>
+</head>
+
+<body>
+  <script>
+    'use strict';
+    /*1. Написать программу, которая по номеру месяца выводит его название в консоль. Номер месяца вводит пользователь (от 1 до 12).
+    Сразу после ввода исходных данных осуществить проверку корректности ввода и, в случае ввода некорректных данных, вывести 
+    сообщение об ошибке в консоль.*/
+    let monthNumber;
+    let monthName;
+
+    monthNumber = prompt('Введите номер мясяца от 1 до 12:');
+
+  
+    if (monthNumber.trim() == '' || monthNumber == 0) {
+      console.log('Ошибка! Вы не чего не ввели.');
+    }
+    if (monthNumber < 0 || monthNumber > 12) {
+      console.log('Ошибка! Вы ввели значение вне диапазона от 1 до 12.');
+    }
+    else if (Number(monthNumber) == (monthNumber)) {
+    }
+    else {
+      console.log('Ошибка! Вы ввели не число.');
+    }
+    if (monthNumber % 1 !== monthNumber) {
+    }
+    else {
+      console.log('Ошибка! Вы ввели не целое число.');
+    }
+    monthName = new Date(monthNumber).toLocaleString('ru-RU', { month: 'long' });
+    
+    console.log(monthName);
+  </script>
+</body>
+
+</html>
